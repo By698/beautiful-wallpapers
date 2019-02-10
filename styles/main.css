@@ -11,7 +11,6 @@ html {
 
 img {
     display: block;
-    width: 100%;
     margin: auto;
     text-align: center;
 }
@@ -73,23 +72,29 @@ h1 {
     width: 100%;
     overflow: hidden;
     color: #fff0e2;
+    margin-bottom: -100px;
+    height: 100vh;
 }
 
-.container-absolute {
-    position: absolute;
+.container-relative {
+    position: relative;
 }
 
-.jumbotron .container-absolute {
-    top: 100px;
-    text-align: center;
-    width: 100%;
-    background: #000000;
-    opacity: .9;
+.jumbotron .container-relative {
+    height: 100px;
+    bottom: 80vh;
+    width: 50%;
+    margin-left: 10vw;
+    opacity: .8;
+    padding: 15px;
+    font-size: calc(.75em + 2vw);
 }
 
-.blur {
-    -webkit-filter: blur(1px);
-    filter: blur(1px);
+.container-flex-col {
+    display: flex;
+    flex-direction: column;
+    align-content: space-around;
+    justify-content: space-around;
 }
 
 @media screen and (max-width: 429px) {
@@ -116,6 +121,13 @@ h1 {
     .nav-header li:last-child {
         border: none;
     }
+    .jumbotron .container-relative {
+        width: 70%;
+    }
+    .jumbotron img {
+        min-width: 100vh;
+        height: 100vh;
+    }
 }
 
 @media screen and (min-width: 430px) {
@@ -135,11 +147,27 @@ h1 {
         font-size: calc(1em + 1vw);
         margin: 0 1vw;
     }
-    /* .jumbotron {
-        margin-top: 70px;
-    } */
 }
 
-@media screen and (min-width: 430px) and (orientation: portrait) {}
+@media screen and (min-width: 430px) and (orientation: portrait) {
+    .jumbotron img {
+        height: 100vh;
+    }
+}
 
-@media screen and (min-width: 430px) and (orientation: landscape) {}
+@media screen and (min-width: 430px) and (orientation: landscape) {
+    .jumbotron img {
+        min-width: 100vw;
+        max-height: 100vh;
+    }
+    .jumbotron .container-relative {
+        bottom: 75vh;
+        width: 90%;
+    }
+}
+
+@media screen and (min-width: 1000px) and (orientation: landscape) {
+    .jumbotron .container-relative {
+        width: 50%;
+    }
+}
