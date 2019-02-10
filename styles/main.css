@@ -39,7 +39,7 @@ h1 {
 }
 
 section h1 {
-    margin: 0 0 10px 20vw;
+    margin: 0 0 5vh 20vw;
     font-size: calc(2em + 4vmax);
     width: 100%;
 }
@@ -130,14 +130,18 @@ figcaption h4 {
     font-size: calc(.75em + 2vw);
 }
 
-#gallery {
-    margin-top: 25vh;
+.section-linked {
+    margin-top: 20vh;
+    padding-top: 70px;
     width: 100%;
+    overflow: hidden;
+}
+
+.container-flex {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: baseline;
-    overflow: hidden;
 }
 
 @media screen and (max-width: 429px) {
@@ -156,13 +160,13 @@ figcaption h4 {
         width: 50vw;
         margin: 70px auto 0px;
     }
-    .nav-header li {
+    .nav-header a {
         display: block;
         margin: 0;
         padding: 10px;
         border-bottom: 1px dashed #fff0e2;
     }
-    .nav-header li:last-child {
+    .nav-header a:last-child {
         border: none;
     }
     .jumbotron .container-relative {
