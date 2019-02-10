@@ -13,6 +13,11 @@ img {
     display: block;
     margin: auto;
     text-align: center;
+    width: 100%;
+}
+
+a {
+    color: #fff0e2;
 }
 
 body,
@@ -21,14 +26,53 @@ h2,
 h3,
 h4,
 li,
-ul {
+ul,
+figure {
     margin: 0;
     padding: 0;
     font-weight: normal;
+    display: block;
 }
 
 h1 {
     font-family: 'Lobster', cursive;
+}
+
+section h1 {
+    margin: 0 0 10px 20vw;
+    font-size: calc(2em + 4vmax);
+    width: 100%;
+}
+
+section h1:after {
+    display: block;
+    content: '';
+    position: relative;
+    width: 80vw;
+    margin-top: 2px;
+    border-top: calc(.05em + 0.3vh) solid #000000;
+}
+
+figcaption h4 {
+    font-size: calc(1rem + .3vmax);
+    line-height: 1.5;
+    padding: 0 5% 15px;
+    font-weight: bold;
+}
+
+.container-flex-col {
+    display: flex;
+    flex-direction: column;
+    align-content: space-around;
+    justify-content: space-around;
+}
+
+.container-relative {
+    position: relative;
+}
+
+.nav-header {
+    text-align: center;
 }
 
 .header-body {
@@ -45,15 +89,10 @@ h1 {
 
 .logo {
     text-align: center;
-    background: #000000;
     font-family: 'Lobster', cursive;
     font-size: 2.25rem;
     letter-spacing: 0.05rem;
     font-style: italic;
-}
-
-.nav-header {
-    text-align: center;
 }
 
 .nav-header li {
@@ -72,17 +111,18 @@ h1 {
     width: 100%;
     overflow: hidden;
     color: #fff0e2;
-    margin-bottom: -100px;
-    height: 100vh;
+    max-height: 100vh;
 }
 
-.container-relative {
-    position: relative;
+.jumbotron img {
+    height: 100vh;
+    min-width: 100vw;
+    width: auto;
 }
 
 .jumbotron .container-relative {
     height: 100px;
-    bottom: 80vh;
+    bottom: 75vh;
     width: 50%;
     margin-left: 10vw;
     opacity: .8;
@@ -90,11 +130,14 @@ h1 {
     font-size: calc(.75em + 2vw);
 }
 
-.container-flex-col {
+#gallery {
+    margin-top: 25vh;
+    width: 100%;
     display: flex;
-    flex-direction: column;
-    align-content: space-around;
-    justify-content: space-around;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: baseline;
+    overflow: hidden;
 }
 
 @media screen and (max-width: 429px) {
@@ -102,6 +145,7 @@ h1 {
         position: fixed;
         top: 0;
         right: 0;
+        background: #000000ff;
         width: 100%;
         height: 70px;
         padding-top: 15px;
@@ -124,9 +168,16 @@ h1 {
     .jumbotron .container-relative {
         width: 70%;
     }
-    .jumbotron img {
-        min-width: 100vh;
-        height: 100vh;
+    #gallery figure {
+        width: 90vw;
+        max-height: 100vh;
+    }
+    #gallery figure:nth-child(2n) {
+        margin-left: 10vw;
+        padding: 10px 0;
+    }
+    #gallery img {
+        width: 100%;
     }
 }
 
@@ -134,6 +185,7 @@ h1 {
     .header-body {
         top: 0;
         right: 0;
+        background: #000000ff;
         position: fixed;
         width: 100vw;
         height: 70px;
@@ -150,24 +202,47 @@ h1 {
 }
 
 @media screen and (min-width: 430px) and (orientation: portrait) {
-    .jumbotron img {
-        height: 100vh;
+    .jumbotron .container-relative {
+        width: 70%;
+    }
+    #gallery figure {
+        width: 99vw;
+        height: auto;
+        margin: 5vh auto;
     }
 }
 
 @media screen and (min-width: 430px) and (orientation: landscape) {
-    .jumbotron img {
-        min-width: 100vw;
-        max-height: 100vh;
+    .header-body {
+        height: 60px;
     }
     .jumbotron .container-relative {
-        bottom: 75vh;
-        width: 90%;
+        font-size: calc(.75em + 1vw);
+    }
+    .normal {
+        max-width: 33vw;
+    }
+    .wide {
+        max-width: 66vw;
+    }
+    #gallery img {
+        max-height: 90vh;
+        width: auto;
+        max-width: 100%;
+    }
+    #gallery {
+        justify-content: space-around;
+    }
+}
+
+@media screen and (min-width: 1000px) and (orientation: portrait) {
+    figcaption h4 {
+        font-size: calc(2rem + .3vmax);
     }
 }
 
 @media screen and (min-width: 1000px) and (orientation: landscape) {
     .jumbotron .container-relative {
-        width: 50%;
+        width: 70%;
     }
 }
