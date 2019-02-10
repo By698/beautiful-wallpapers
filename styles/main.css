@@ -21,6 +21,7 @@ a {
 }
 
 body,
+p,
 h1,
 h2,
 h3,
@@ -131,7 +132,7 @@ figcaption h4 {
 }
 
 .section-linked {
-    margin-top: 20vh;
+
     padding-top: 70px;
     width: 100%;
     overflow: hidden;
