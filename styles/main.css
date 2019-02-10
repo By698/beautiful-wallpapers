@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css?family=Lobster|Playfair+Display:400,700');
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+    background: #fff0e2;
+    font-family: 'Playfair', serif;
+}
+
+img {
+    display: block;
+    width: 100%;
+    margin: auto;
+    text-align: center;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+li,
+ul {
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+}
+
+h1 {
+    font-family: 'Lobster', cursive;
+}
+
+.header-body {
+    display: flex;
+    width: 100vw;
+    background: #000000;
+    color: #fff0e2;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    border-bottom: 1px solid #fff0e2;
+    z-index: 10;
+}
+
+.logo {
+    text-align: center;
+    background: #000000;
+    font-family: 'Lobster', cursive;
+    font-size: 2.25rem;
+    letter-spacing: 0.05rem;
+    font-style: italic;
+}
+
+.nav-header {
+    text-align: center;
+}
+
+.nav-header li {
+    text-decoration: underline;
+    list-style-type: none;
+    margin: 15px auto;
+    font-size: 1.25rem;
+    display: inline-block;
+}
+
+.nav-header li:hover {
+    cursor: pointer;
+}
+
+.jumbotron {
+    width: 100%;
+    overflow: hidden;
+    color: #fff0e2;
+}
+
+.container-absolute {
+    position: absolute;
+}
+
+.jumbotron .container-absolute {
+    top: 100px;
+    text-align: center;
+    width: 100%;
+    background: #000000;
+    opacity: .9;
+}
+
+.blur {
+    -webkit-filter: blur(1px);
+    filter: blur(1px);
+}
+
+@media screen and (max-width: 429px) {
+    .logo {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 70px;
+        padding-top: 15px;
+        border-bottom: 1px solid #fff0e2;
+        opacity: .75;
+    }
+    .nav-header {
+        width: 50vw;
+        margin: 70px auto 0px;
+    }
+    .nav-header li {
+        display: block;
+        margin: 0;
+        padding: 10px;
+        border-bottom: 1px dashed #fff0e2;
+    }
+    .nav-header li:last-child {
+        border: none;
+    }
+}
+
+@media screen and (min-width: 430px) {
+    .header-body {
+        top: 0;
+        right: 0;
+        position: fixed;
+        width: 100vw;
+        height: 70px;
+        padding: 0 2vw;
+        opacity: .75;
+    }
+    .logo {
+        margin-left: 1vw;
+    }
+    .nav-header li {
+        font-size: calc(1em + 1vw);
+        margin: 0 1vw;
+    }
+    /* .jumbotron {
+        margin-top: 70px;
+    } */
+}
+
+@media screen and (min-width: 430px) and (orientation: portrait) {}
+
+@media screen and (min-width: 430px) and (orientation: landscape) {}
