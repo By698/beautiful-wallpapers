@@ -155,6 +155,7 @@ figcaption h4 {
         padding-top: 15px;
         border-bottom: 1px solid #fff0e2;
         opacity: .75;
+        z-index: 5;
     }
     .nav-header {
         width: 50vw;
