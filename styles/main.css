@@ -174,15 +174,15 @@ figcaption h4 {
     .jumbotron .container-relative {
         width: 70%;
     }
-    #gallery figure {
+    .section-linked figure {
         width: 90vw;
         max-height: 100vh;
     }
-    #gallery figure:nth-child(2n) {
+    .section-linked figure:nth-child(2n) {
         margin-left: 10vw;
         padding: 10px 0;
     }
-    #gallery img {
+    .section-linked figure img {
         width: 100%;
     }
 }
@@ -211,7 +211,7 @@ figcaption h4 {
     .jumbotron .container-relative {
         width: 70%;
     }
-    #gallery figure {
+    .section-linked figure {
         width: 99vw;
         height: auto;
         margin: 5vh auto;
@@ -231,12 +231,12 @@ figcaption h4 {
     .wide {
         max-width: 66vw;
     }
-    #gallery img {
+    .section-linked figure img {
         max-height: 90vh;
         width: auto;
         max-width: 100%;
     }
-    #gallery {
+    .container-flex {
         justify-content: space-around;
     }
 }
