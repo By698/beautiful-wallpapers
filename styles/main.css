@@ -21,6 +21,7 @@ a {
 }
 
 body,
+p,
 h1,
 h2,
 h3,
@@ -58,13 +59,6 @@ figcaption h4 {
     line-height: 1.5;
     padding: 0 5% 15px;
     font-weight: bold;
-}
-
-.container-flex-col {
-    display: flex;
-    flex-direction: column;
-    align-content: space-around;
-    justify-content: space-around;
 }
 
 .container-relative {
@@ -131,10 +125,10 @@ figcaption h4 {
 }
 
 .section-linked {
-    margin-top: 20vh;
     padding-top: 70px;
     width: 100%;
     overflow: hidden;
+    margin-bottom: 30px;
 }
 
 .container-flex {
@@ -142,6 +136,28 @@ figcaption h4 {
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: baseline;
+}
+
+.info {
+    text-align: center;
+    background: #000000;
+    color: #fff0e2;
+}
+
+#about.container-flex {
+    align-items: stretch;
+}
+
+.info h3 {
+    font-style: italic;
+    font-family: 'Lobster', cursive;
+    font-size: calc(1rem + 2vmax);
+    margin: 20px 0;
+}
+
+.info p {
+    font-size: calc(1rem + .5vmax);
+    margin: 15px 10px;
 }
 
 @media screen and (max-width: 429px) {
@@ -155,7 +171,7 @@ figcaption h4 {
         padding-top: 15px;
         border-bottom: 1px solid #fff0e2;
         opacity: .75;
-        z-index: 5;
+        z-index: 10;
     }
     .nav-header {
         width: 50vw;
@@ -173,16 +189,20 @@ figcaption h4 {
     .jumbotron .container-relative {
         width: 70%;
     }
-    #gallery figure {
+    .section-linked figure {
         width: 90vw;
         max-height: 100vh;
     }
-    #gallery figure:nth-child(2n) {
+    .section-linked figure:nth-child(2n) {
         margin-left: 10vw;
         padding: 10px 0;
     }
-    #gallery img {
+    .section-linked figure img {
         width: 100%;
+    }
+    .info {
+        width: 100%;
+        margin-bottom: 5vh;
     }
 }
 
@@ -204,13 +224,16 @@ figcaption h4 {
         font-size: calc(1em + 1vw);
         margin: 0 1vw;
     }
+    .info {
+        width: 45%;
+    }
 }
 
 @media screen and (min-width: 430px) and (orientation: portrait) {
     .jumbotron .container-relative {
         width: 70%;
     }
-    #gallery figure {
+    .section-linked figure {
         width: 99vw;
         height: auto;
         margin: 5vh auto;
@@ -230,19 +253,29 @@ figcaption h4 {
     .wide {
         max-width: 66vw;
     }
-    #gallery img {
+    .section-linked figure img {
         max-height: 90vh;
         width: auto;
         max-width: 100%;
     }
-    #gallery {
+    .container-flex {
         justify-content: space-around;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .info {
+        width: 30%;
+        margin: 0 2vw;
+    }
+    #about {
+        justify-content: center;
     }
 }
 
 @media screen and (min-width: 1000px) and (orientation: portrait) {
     figcaption h4 {
-        font-size: calc(2rem + .3vmax);
+        font-size: calc(2rem + .5vmax);
     }
 }
 
