@@ -61,13 +61,6 @@ figcaption h4 {
     font-weight: bold;
 }
 
-.container-flex-col {
-    display: flex;
-    flex-direction: column;
-    align-content: space-around;
-    justify-content: space-around;
-}
-
 .container-relative {
     position: relative;
 }
@@ -132,10 +125,10 @@ figcaption h4 {
 }
 
 .section-linked {
-
     padding-top: 70px;
     width: 100%;
     overflow: hidden;
+    margin-bottom: 30px;
 }
 
 .container-flex {
@@ -143,6 +136,28 @@ figcaption h4 {
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: baseline;
+}
+
+.info {
+    text-align: center;
+    background: #000000;
+    color: #fff0e2;
+}
+
+#about.container-flex {
+    align-items: stretch;
+}
+
+.info h3 {
+    font-style: italic;
+    font-family: 'Lobster', cursive;
+    font-size: calc(1rem + 2vmax);
+    margin: 20px 0;
+}
+
+.info p {
+    font-size: calc(1rem + .5vmax);
+    margin: 15px 10px;
 }
 
 @media screen and (max-width: 429px) {
@@ -185,6 +200,10 @@ figcaption h4 {
     .section-linked figure img {
         width: 100%;
     }
+    .info {
+        width: 100%;
+        margin-bottom: 5vh;
+    }
 }
 
 @media screen and (min-width: 430px) {
@@ -204,6 +223,9 @@ figcaption h4 {
     .nav-header li {
         font-size: calc(1em + 1vw);
         margin: 0 1vw;
+    }
+    .info {
+        width: 45%;
     }
 }
 
@@ -241,9 +263,19 @@ figcaption h4 {
     }
 }
 
+@media screen and (min-width: 1000px) {
+    .info {
+        width: 30%;
+        margin: 0 2vw;
+    }
+    #about {
+        justify-content: center;
+    }
+}
+
 @media screen and (min-width: 1000px) and (orientation: portrait) {
     figcaption h4 {
-        font-size: calc(2rem + .3vmax);
+        font-size: calc(2rem + .5vmax);
     }
 }
 
