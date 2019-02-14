@@ -29,7 +29,8 @@ h4,
 h5,
 li,
 ul,
-figure {
+figure,
+footer {
     margin: 0;
     padding: 0;
     font-weight: normal;
@@ -68,6 +69,20 @@ figcaption h4 {
     line-height: 1.5;
     padding: 0 5% 15px;
     font-weight: bold;
+}
+
+footer {
+    width: 100vw;
+    background: #000000;
+    padding: 0 3vw;
+    color: #fff0e2;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    border-top: 1px solid #fff0e2;
+    position: fixed;
+    bottom: 0;
+    left: 0;
 }
 
 .container-relative {
@@ -126,7 +141,7 @@ figcaption h4 {
 .jumbotron .container-relative {
     height: 100px;
     bottom: 75vh;
-    width: 50%;
+    width: 70%;
     margin-left: 10vw;
     opacity: .8;
     padding: 15px;
@@ -205,9 +220,6 @@ figcaption h4 {
     .nav-header a:last-child {
         border: none;
     }
-    .jumbotron .container-relative {
-        width: 70%;
-    }
     .section-linked figure {
         width: 90vw;
         max-height: 100vh;
@@ -222,6 +234,15 @@ figcaption h4 {
     .info {
         width: 100%;
         margin-bottom: 5vh;
+    }
+}
+
+@media screen and (max-height: 380px) {
+    footer {
+        position: static;
+    }
+    .jumbotron .container-relative {
+        width: 90%;
     }
 }
 
@@ -249,9 +270,6 @@ figcaption h4 {
 }
 
 @media screen and (min-width: 430px) and (orientation: portrait) {
-    .jumbotron .container-relative {
-        width: 70%;
-    }
     .section-linked figure {
         width: 99vw;
         height: auto;
@@ -295,11 +313,5 @@ figcaption h4 {
 @media screen and (min-width: 1000px) and (orientation: portrait) {
     figcaption h4 {
         font-size: calc(2rem + .5vmax);
-    }
-}
-
-@media screen and (min-width: 1000px) and (orientation: landscape) {
-    .jumbotron .container-relative {
-        width: 70%;
     }
 }
