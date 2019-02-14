@@ -28,7 +28,8 @@ h3,
 h4,
 li,
 ul,
-figure {
+figure,
+footer {
     margin: 0;
     padding: 0;
     font-weight: normal;
@@ -59,6 +60,16 @@ figcaption h4 {
     line-height: 1.5;
     padding: 0 5% 15px;
     font-weight: bold;
+}
+
+footer {
+    width: 100vw;
+    padding: 0 5vw;
+    background: #000000;
+    color: #fff0e2;
+    height: 50px;
+    display: flex;
+    border-top: 1px solid #fff0e2;
 }
 
 .container-relative {
@@ -159,6 +170,7 @@ figcaption h4 {
     font-size: calc(1rem + .5vmax);
     margin: 15px 10px;
 }
+
 
 @media screen and (max-width: 429px) {
     .logo {
