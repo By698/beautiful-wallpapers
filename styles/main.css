@@ -49,21 +49,6 @@ h5 {
     font-size: calc(1rem + .5vmax);
 }
 
-section h1 {
-    margin: 0 0 5vh 20vw;
-    font-size: calc(2em + 4vmax);
-    width: 100%;
-}
-
-section h1:after {
-    display: block;
-    content: '';
-    position: relative;
-    width: 80vw;
-    margin-top: 2px;
-    border-top: calc(.05em + 0.3vh) solid #000000;
-}
-
 figcaption h4 {
     font-size: calc(1rem + .3vmax);
     line-height: 1.5;
@@ -76,7 +61,7 @@ footer {
     background: #000000;
     padding: 0 3vw;
     color: #fff0e2;
-    height: 30px;
+    height: 40px;
     display: flex;
     align-items: center;
     border-top: 1px solid #fff0e2;
@@ -149,10 +134,25 @@ footer {
 }
 
 .section-linked {
-    padding-top: 70px;
+    padding: 60px 0 30px;
     width: 100%;
     overflow: hidden;
     margin-bottom: 30px;
+}
+
+.section-linked h1 {
+    margin: 0 0 5vh 20vw;
+    font-size: calc(2em + 4vmax);
+    width: 100%;
+}
+
+.section-linked h1:after {
+    display: block;
+    content: '';
+    position: relative;
+    width: 80vw;
+    margin-top: 2px;
+    border-top: calc(.05em + 0.3vh) solid #000000;
 }
 
 .container-flex {
