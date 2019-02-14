@@ -26,6 +26,7 @@ h1,
 h2,
 h3,
 h4,
+h5,
 li,
 ul,
 figure {
@@ -39,12 +40,12 @@ h1 {
     font-family: 'Lobster', cursive;
 }
 
-h4 {
-    font-size: 1.25rem;
+h5 {
     background: #000000;
     color: #fff0e2;
     padding: 4px;
     margin: auto;
+    font-size: calc(1rem + .5vmax);
 }
 
 section h1 {
