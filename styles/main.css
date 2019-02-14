@@ -26,6 +26,7 @@ h1,
 h2,
 h3,
 h4,
+h5,
 li,
 ul,
 figure {
@@ -37,6 +38,14 @@ figure {
 
 h1 {
     font-family: 'Lobster', cursive;
+}
+
+h5 {
+    background: #000000;
+    color: #fff0e2;
+    padding: 4px;
+    margin: auto;
+    font-size: calc(1rem + .5vmax);
 }
 
 section h1 {
@@ -144,7 +153,7 @@ figcaption h4 {
     color: #fff0e2;
 }
 
-#about.container-flex {
+.flex-stretch-align {
     align-items: stretch;
 }
 
@@ -158,6 +167,16 @@ figcaption h4 {
 .info p {
     font-size: calc(1rem + .5vmax);
     margin: 15px 10px;
+}
+
+.contact-info {
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.flex-collumn {
+    flex-direction: column;
+    flex-wrap: nowrap;
 }
 
 @media screen and (max-width: 429px) {
@@ -268,7 +287,7 @@ figcaption h4 {
         width: 30%;
         margin: 0 2vw;
     }
-    #about {
+    .flex-stretch-align {
         justify-content: center;
     }
 }
