@@ -47,6 +47,7 @@ h5 {
     padding: 4px;
     margin: auto;
     font-size: calc(1rem + .5vmax);
+    text-align: center;
 }
 
 figcaption h4 {
