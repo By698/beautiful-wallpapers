@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Lobster|Playfair+Display:400,700');
+
 * {
     box-sizing: border-box;
 }
@@ -105,10 +106,13 @@ footer {
     margin: 15px auto;
     font-size: 1.25rem;
     display: inline-block;
+    padding: 5px;
+    border-radius: 5px;
 }
 
 .nav-header li:hover {
     cursor: pointer;
+    background: #111111;
 }
 
 .jumbotron {
